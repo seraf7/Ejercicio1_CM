@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carreras">
+        <item>@string/aeroespacial</item>
+        <item>@string/ambiental</item>
+        <item>@string/civil</item>
+        <item>@string/minas</item>
+        <item>@string/electrica</item>
+        <item>@string/computacion</item>
+        <item>@string/biomedicos</item>
+        <item>@string/telecom</item>
+        <item>@string/geofisica</item>
+        <item>@string/geologica</item>
+        <item>@string/geomatica</item>
+        <item>@string/industrial</item>
+        <item>@string/mecanica</item>
+        <item>@string/mecatronica</item>
+        <item>@string/petrolera</item>
+    </string-array>
+</resources>

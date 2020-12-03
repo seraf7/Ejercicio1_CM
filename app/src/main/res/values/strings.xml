@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Ejercicio1</string>
+    <string name="aeroespacial">Ingeniería Aeroespacial</string>
+    <string name="civil">Ingeniería Civil</string>
+    <string name="geomatica">Ingeniería Geomática</string>
+    <string name="ambiental">Ingeniería Ambiental</string>
+    <string name="geofisica">Ingeniería Geofísica</string>
+    <string name="geologica">Ingeniería Geológica</string>
+    <string name="petrolera">Ingeniería Petrolera</string>
+    <string name="minas">Ingeniería de Minas y Metalurgia</string>
+    <string name="computacion">Ingeniería en Computación</string>
+    <string name="electrica">Ingeniería Eléctrica Electrónica</string>
+    <string name="telecom">Ingeniería en Telecomunicaciones</string>
+    <string name="mecanica">Ingeniería Mecánica</string>
+    <string name="industrial">Ingeniería Industrial</string>
+    <string name="mecatronica">Ingeniería Mecatrónica</string>
+    <string name="biomedicos">Ingeniería en Sistemas Biomédicos</string>
 </resources>
