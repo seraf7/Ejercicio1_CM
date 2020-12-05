@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ejercicio1</string>
+    <string name="aeroespacial">Aerospace Engineering</string>
+    <string name="civil">Civil Engineering</string>
+    <string name="geomatica">Geomatic Engineering</string>
+    <string name="ambiental">Environmental Engineering</string>
+    <string name="geofisica">Geophysical Engineering</string>
+    <string name="geologica">Geological Engineering</string>
+    <string name="petrolera">Petroleum Engineering</string>
+    <string name="minas">Mining and Metallurgy Engineering</string>
+    <string name="computacion">Computer Engineering</string>
+    <string name="electrica">Electrical Engineering</string>
+    <string name="telecom">Telecommunications Engineering</string>
+    <string name="mecanica">Mechanical Engineering</string>
+    <string name="industrial">Industrial Engineering</string>
+    <string name="mecatronica">Mechatronics Engineering</string>
+    <string name="biomedicos">Biomedical Systems Engineering</string>
+    <string name="fecha">dd/mm/yyyy</string>
+    <string name="errorNombre">Enter your name</string>
+    <string name="errorApellido">Enter your last name</string>
+    <string name="errorCuenta">Invalid account number</string>
+    <string name="hintNombre">Name</string>
+    <string name="hintApellido">Last name</string>
+    <string name="errorFecha">Enter a valid date</string>
+    <string name="fechaVacia">Enter a date</string>
+    <string name="errorDatos">Check your information</string>
+    <string name="anios">" years old"</string>
+</resources>

@@ -15,4 +15,14 @@
     <string name="industrial">Ingeniería Industrial</string>
     <string name="mecatronica">Ingeniería Mecatrónica</string>
     <string name="biomedicos">Ingeniería en Sistemas Biomédicos</string>
+    <string name="fecha">dd/MM/yyyy</string>
+    <string name="errorNombre">Ingresa tu nombre</string>
+    <string name="errorApellido">Ingresa tus apellidos</string>
+    <string name="errorCuenta">Número de cuenta no válido</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintApellido">Apellidos</string>
+    <string name="errorFecha">Ingresa una fecha valida</string>
+    <string name="fechaVacia">Ingresa una fecha</string>
+    <string name="errorDatos">Revisa tus datos</string>
+    <string name="anios">" años"</string>
 </resources>
