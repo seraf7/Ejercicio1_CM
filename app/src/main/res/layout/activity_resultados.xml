@@ -48,7 +48,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="250dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,22 +61,6 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvCuenta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="120dp"
-                android:text="TextView"
-                android:textSize="@dimen/tamanioTexto"
-                android:textStyle="italic" />
-
-            <TextView
                 android:id="@+id/tvNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,13 +68,44 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="130dp"
+                android:layout_marginStart="145dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="170dp"
-                android:text="TextView"
+                android:text="@string/hintNombre"
                 android:textSize="@dimen/tamanioTexto"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="120dp"
+                android:text="@string/numCta"
+                android:textSize="@dimen/tamanioTexto"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvAnios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="70dp"
+                android:text="@string/anios"
+                android:textSize="@dimen/tamanioTexto" />
 
             <TextView
                 android:id="@+id/tvCarrera"
@@ -104,25 +119,10 @@
                 android:layout_marginTop="200dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="TextView"
+                android:text="@string/aeroespacial"
                 android:textAlignment="center"
                 android:textSize="@dimen/textoSecundario"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvAnios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="150dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="70dp"
-                android:text="TextView"
-                android:textSize="@dimen/tamanioTexto" />
 
             <ImageView
                 android:id="@+id/ivAvatar"
@@ -131,7 +131,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="35dp"
                 android:layout_marginBottom="105dp"
                 app:srcCompat="@drawable/avatar_m" />
