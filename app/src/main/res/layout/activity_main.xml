@@ -7,32 +7,115 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/etFecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
+        android:id="@+id/etApellido"
+        android:layout_width="@dimen/anchoET"
+        android:layout_height="@dimen/altoET"
         android:ems="10"
-        android:focusable="false"
-        android:hint="@string/fecha"
-        android:inputType="date"
+        android:hint="@string/hintApellido"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:textSize="@dimen/tamanioTexto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.302" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="@dimen/anchoET"
+        android:layout_height="@dimen/altoET"
+        android:ems="10"
+        android:hint="@string/hintNombre"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:textSize="@dimen/tamanioTexto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/tamanioIcono"
+        android:layout_height="@dimen/tamanioIcono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193"
+        app:srcCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
 
     <Spinner
         android:id="@+id/spCarreras"
-        android:layout_width="320dp"
-        android:layout_height="33dp"
+        android:layout_width="@dimen/anchoET"
+        android:layout_height="@dimen/altoET"
         android:entries="@array/carreras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.82" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/tamanioIcono"
+        android:layout_height="@dimen/tamanioIcono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684"
+        app:srcCompat="@drawable/ic_baseline_school_24" />
+
+    <EditText
+        android:id="@+id/etCuenta"
+        android:layout_width="@dimen/anchoET"
+        android:layout_height="@dimen/altoET"
+        android:ems="10"
+        android:hint="@string/numCta"
+        android:inputType="number"
+        android:maxLength="9"
+        android:textSize="@dimen/tamanioTexto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/tamanioIcono"
+        android:layout_height="@dimen/tamanioIcono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="@dimen/anchoET"
+        android:layout_height="@dimen/altoET"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/hintFecha"
+        android:inputType="date"
+        android:textSize="@dimen/tamanioTexto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnEnviar"
@@ -46,50 +129,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@android:drawable/ic_menu_send" />
+        app:srcCompat="@drawable/send" />
 
-    <EditText
-        android:id="@+id/etNombre"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hintNombre"
-        android:inputType="textPersonName"
-        android:maxLength="30"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="80dp" />
 
-    <EditText
-        android:id="@+id/etApellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hintApellido"
-        android:inputType="textPersonName"
-        android:maxLength="30"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:logo="@drawable/escudofi"
+        app:title="@string/titulo"
+        app:titleMarginStart="40dp"
+        app:titleTextColor="@color/primaryTextColor" />
 
-    <EditText
-        android:id="@+id/etCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:maxLength="9"
+    <RadioGroup
+        android:id="@+id/rgGenero"
+        android:layout_width="@dimen/anchoET"
+        android:layout_height="@dimen/altoET"
+        android:gravity="center"
+        android:onClick="comprobarGenero"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.4">
+
+        <RadioButton
+            android:id="@+id/rbMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:text="@string/genM"
+            android:textSize="@dimen/textoSecundario" />
+
+        <RadioButton
+            android:id="@+id/rbFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:text="@string/genF"
+            android:textSize="@dimen/textoSecundario" />
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

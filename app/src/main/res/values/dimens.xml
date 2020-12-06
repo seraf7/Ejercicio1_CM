@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="anchoET">260dp</dimen>
+    <dimen name="altoET">50dp</dimen>
+    <dimen name="tamanioTexto">18sp</dimen>
+    <dimen name="textoSecundario">16sp</dimen>
+    <dimen name="tamanioIcono">50dp</dimen>
+</resources>

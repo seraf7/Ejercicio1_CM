@@ -6,15 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.ejercicio1.dialog.DatePickerFragment;
 import com.example.ejercicio1.models.Alumno;
 
@@ -24,14 +27,19 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
+    MediaPlayer envio;
+    float volumen = 0.5f;
+
     EditText etNombre;
     EditText etApellido;
     EditText etCuenta;
     EditText etFecha;
-    String carrera;
+    int carrera;
+    char genero;
     Spinner spCarreras;
     Date fecha;
     Date fechaActual = new Date();      //Inicilizacion con fecha actual
+    RadioGroup rgGenero;
 
     Alumno alumno;
 
@@ -45,6 +53,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Objeto de audio
+        envio = MediaPlayer.create(this, R.raw.envio);
+        envio.setVolume(volumen, volumen);
+
         //Objeto para dar formato a la fecha
         formatoFecha = new SimpleDateFormat(getResources().getString(R.string.fecha).toString());
 
@@ -54,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         etCuenta = findViewById(R.id.etCuenta);
         etFecha = findViewById(R.id.etFecha);
         spCarreras = findViewById(R.id.spCarreras);
+        rgGenero = findViewById(R.id.rgGenero);
 
         //Asociar un metodo listener a etFecha
         etFecha.setOnClickListener(this);
@@ -92,13 +105,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Metodo para manejar seleccion del Spinner
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String[] carreras = getResources().getStringArray(R.array.carreras);
-        carrera = carreras[position];
+        carrera = position;
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    //Metodo para comprobar genero seleccionado
+    public boolean comprobarGenero(View view){
+        if(rgGenero.getCheckedRadioButtonId() == R.id.rbFemenino){
+            genero = 'F';
+            return true;
+        }
+        if(rgGenero.getCheckedRadioButtonId() == R.id.rbMasculino){
+            genero = 'M';
+            return true;
+        }
+        return false;
     }
 
     public void enviar(View view) throws ClassNotFoundException {
@@ -108,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             //Creacion de alumno con datos de formulario
             alumno = new Alumno(etNombre.getText().toString(), etApellido.getText().toString(),
-                    etCuenta.getText().toString(), fecha, carrera);
+                    etCuenta.getText().toString(), fecha, carrera, genero);
 
             //Instancia de un Bundle
             Bundle bundle = new Bundle();
@@ -119,14 +144,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             //Iniciar Activity de resultados
             startActivity(intent);
+
+            //Aplicar animacion para entrada de resultados
+            Animatoo.animateSwipeLeft(this);
+
+            //Reproduccion de efecto de audio
+            envio.start();
         }
         else {
-            Toast.makeText(this, "Revisa tus datos", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getResources().getString(R.string.errorDatos), Toast.LENGTH_LONG).show();
         }
     }
 
     //Metodo para validar datos del formulario
-    public boolean validar() throws ClassNotFoundException {
+    public boolean validar() {
         if(etNombre.getText().toString().equals("")){
             etNombre.setError(getResources().getString(R.string.errorNombre));
             return false;
@@ -148,11 +179,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fecha = formatoFecha.parse(etFecha.getText().toString());
             //Validar que feacha ingresada sea anterior a fecha actual
             if(fecha.after(fechaActual)){
-                Toast.makeText(this, getResources().getString(R.string.errorFecha), Toast.LENGTH_SHORT).show();
+                etFecha.setError(getResources().getString(R.string.errorFecha));
                 return false;
             }
         } catch (ParseException e) {
             e.printStackTrace();
+            return false;
+        }
+        if(!comprobarGenero(rgGenero)){
             return false;
         }
         return true;

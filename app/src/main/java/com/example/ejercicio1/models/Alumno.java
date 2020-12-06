@@ -16,14 +16,16 @@ public class Alumno implements Serializable {
     private String apellido;
     private String numCta;
     private Date fechaNac;
-    private String carrera;
+    private int carrera;
+    private char genero;
 
-    public Alumno(String nombre, String apellido, String numCta, Date fechaNac, String carrera) {
+    public Alumno(String nombre, String apellido, String numCta, Date fechaNac, int carrera, char genero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.numCta = numCta;
         this.fechaNac = fechaNac;
         this.carrera = carrera;
+        this.genero = genero;
     }
 
     public String getNombre() {
@@ -58,13 +60,17 @@ public class Alumno implements Serializable {
         this.fechaNac = fechaNac;
     }
 
-    public String getCarrera() {
+    public int getCarrera() {
         return carrera;
     }
 
-    public void setCarrera(String carrera) {
+    public void setCarrera(int carrera) {
         this.carrera = carrera;
     }
+
+    public char getGenero() {return genero;}
+
+    public void setGenero(char genero) {this.genero = genero;}
 
     public String getNombCompleto(){
         return this.getNombre() + " " +this.getApellido();

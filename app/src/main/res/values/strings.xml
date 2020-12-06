@@ -25,4 +25,10 @@
     <string name="fechaVacia">Ingresa una fecha</string>
     <string name="errorDatos">Revisa tus datos</string>
     <string name="anios">" años"</string>
+    <string name="numCta">Número de Cuenta</string>
+    <string name="hintFecha">Fecha de nacimiento</string>
+    <string name="titulo">Formulario de registro</string>
+    <string name="genF">Femenino</string>
+    <string name="genM">Masculino</string>
+    <string name="autor">Humberto Serafín Castillo López</string>
 </resources>

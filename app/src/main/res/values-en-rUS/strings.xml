@@ -26,4 +26,10 @@
     <string name="fechaVacia">Enter a date</string>
     <string name="errorDatos">Check your information</string>
     <string name="anios">" years old"</string>
+    <string name="numCta">Account number</string>
+    <string name="hintFecha">Birthdate</string>
+    <string name="titulo">Registration form</string>
+    <string name="genF">Female</string>
+    <string name="genM">Male</string>
+    <string name="autor">Humberto Serafín Castillo López</string>
 </resources>
