@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.example.ejercicio1.models.Alumno;
 import java.text.SimpleDateFormat;
 
 public class Resultados extends AppCompatActivity {
+
+    MediaPlayer salida;
 
     Alumno alumno;
     TextView tvNombre;
@@ -32,6 +35,8 @@ public class Resultados extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados);
+
+        salida = MediaPlayer.create(this, R.raw.envio);
 
         //Recuperar arreglo de carreras
         carreras = getResources().getStringArray(R.array.carreras);
@@ -141,5 +146,7 @@ public class Resultados extends AppCompatActivity {
         startActivity(intent);
         //Animacion para regresar al formulario
         Animatoo.animateSwipeRight(this);
+        //Reproduccion de efecto de sonido
+        salida.start();
     }
 }

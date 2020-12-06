@@ -28,7 +28,6 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     MediaPlayer envio;
-    float volumen = 0.5f;
 
     EditText etNombre;
     EditText etApellido;
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Objeto de audio
         envio = MediaPlayer.create(this, R.raw.envio);
-        envio.setVolume(volumen, volumen);
 
         //Objeto para dar formato a la fecha
         formatoFecha = new SimpleDateFormat(getResources().getString(R.string.fecha).toString());
